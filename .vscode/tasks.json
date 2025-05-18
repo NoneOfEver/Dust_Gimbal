@@ -1,0 +1,60 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build task",
+            "type": "shell",
+            "command": "cmake --build build",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "download dap",
+            "type": "shell",
+            "command": "mingw32-make -j24 ; mingw32-make download_dap",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "download jlink",
+            "type": "shell",
+            "command": "mingw32-make -j24 ; mingw32-make download_jlink",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
+        },
+        {
+            "label": "log",
+            "type": "shell",
+            "command": "JlinkRTTClient",
+            "args": [],
+            "problemMatcher": []
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: 配置",
+            "command": "configure",
+            "preset": "${command:cmake.activeConfigurePresetName}",
+            "problemMatcher": [],
+            "detail": "CMake 模板 配置 任务"
+        },
+        {
+            "label": "Cmake rebuild",
+            "type": "shell",
+            "command": "cmake -S . -B build -G Ninja ",
+            "group": {
+                "isDefault": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
