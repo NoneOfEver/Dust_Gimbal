@@ -30,7 +30,7 @@ typedef struct pwm_ins_temp
     void *id;                                // 实例ID
 } PWMInstance;
 
-typedef struct
+typedef struct 
 {
     TIM_HandleTypeDef *htim;                 // TIM句柄
     uint32_t channel;                        // 通道
