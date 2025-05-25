@@ -1,6 +1,7 @@
 #ifndef Test_H
 #define Test_H
 
+#define ROBOT_TEST
 /**
  * @brief 初始化机械臂,会被RobotInit()调用
  * 

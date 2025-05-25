@@ -30,7 +30,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "robot.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -104,7 +104,7 @@ int main(void)
   MX_SPI2_Init();
   MX_IWDG1_Init();
   /* USER CODE BEGIN 2 */
-
+  RobotInit();
   /* USER CODE END 2 */
 
   /* Init scheduler */

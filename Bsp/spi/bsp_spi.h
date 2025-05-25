@@ -1,3 +1,6 @@
+#ifndef BSP_SPI_H
+#define BSP_SPI_H
+
 #include "spi.h"
 #include "stdint.h"
 #include "gpio.h"
@@ -95,3 +98,4 @@ void SPITransRecv(SPIInstance *spi_ins, uint8_t *ptr_data_rx, uint8_t *ptr_data_
  * @todo 是否直接将mode作为transmit/recv的参数,而不是作为spi实例的属性?两者各有优劣
  */
 void SPISetMode(SPIInstance *spi_ins, SPI_TXRX_MODE_e spi_mode);
+#endif

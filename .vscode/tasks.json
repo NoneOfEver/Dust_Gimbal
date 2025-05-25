@@ -55,6 +55,22 @@
             "problemMatcher": [
                 "$gcc"
             ]
+        },
+        {
+            "label": "flash with JLink+OpenOCD",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-f", "interface/jlink.cfg",          // JLink 接口配置
+                "-f", "target/stm32h7x.cfg",          // 目标芯片配置，换成你的 MCU
+                "-c", "program build/Dust_Gimbal.elf verify reset exit"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Use OpenOCD and JLink to flash ELF file"
         }
     ]
 }

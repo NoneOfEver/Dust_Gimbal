@@ -6,6 +6,9 @@
         "ins_task.h": "c",
         "bmi088.h": "c",
         "bsp_pwm.h": "c",
-        "arm_math.h": "c"
+        "arm_math.h": "c",
+        "dji_motor.h": "c",
+        "test.h": "c",
+        "general_def.h": "c"
     }
 }

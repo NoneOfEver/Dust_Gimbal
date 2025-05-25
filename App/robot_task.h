@@ -18,6 +18,8 @@
 #include "motor_task.h"
 #include "test.h"
 #include "iwdg.h"
+
+
 #ifdef ROBOT_TEST
 void TestTask(void *argument)
 {
