@@ -1,5 +1,11 @@
 {
     "files.associations": {
-        
+        "master_process.h": "c",
+        "ahrs.h": "c",
+        "robot_def.h": "c",
+        "ins_task.h": "c",
+        "bmi088.h": "c",
+        "bsp_pwm.h": "c",
+        "arm_math.h": "c"
     }
 }

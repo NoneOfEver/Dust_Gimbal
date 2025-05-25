@@ -9,7 +9,7 @@
  * 
  */
 
-#include "Bsp_PWM.h"
+#include "bsp_pwm.h"
 #include "stdlib.h"
 #include "memory.h"
 

@@ -16,6 +16,13 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
+add_compile_options(-std=gnu11)
+
+add_definitions(
+    -DARM_MATH_CM7
+    ) # need -D<macro> to define macro
+
+
 # Define the build type
 if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE "Debug")
@@ -44,7 +51,10 @@ add_executable(${CMAKE_PROJECT_NAME})
 add_subdirectory(cmake/stm32cubemx)
 add_subdirectory(App)
 add_subdirectory(Bsp)
-add_subdirectory(Algorithm)
+add_subdirectory(Middlewares/Third_Party/SEGGER)
+add_subdirectory(Modules)
+
+target_compile_options(${CMAKE_PROJECT_NAME} PUBLIC -std=gnu11)
 
 # Link directories setup
 target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
@@ -71,7 +81,8 @@ target_link_libraries(${CMAKE_PROJECT_NAME}
     stm32cubemx
     App 
     Bsp 
-    Algorithm
+    SEGGER
+    Modules
 
     # Add user defined libraries
 )

@@ -32,11 +32,23 @@ rule C_COMPILER__Dust_Gimbal_unscanned_Release
 
 
 #############################################
-# Rule for linking C executable.
+# Rule for compiling CXX files.
 
-rule C_EXECUTABLE_LINKER__Dust_Gimbal_Release
-  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\Users\noneo\.eide\tools\gcc_arm\bin\arm-none-eabi-gcc.exe $FLAGS -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T "C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/STM32H723XG_FLASH.ld" --specs=nano.specs -Wl,-Map=Dust_Gimbal.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
-  description = Linking C executable $TARGET_FILE
+rule CXX_COMPILER__Dust_Gimbal_unscanned_Release
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ${LAUNCHER}${CODE_CHECK}C:\Users\noneo\.eide\tools\gcc_arm\bin\arm-none-eabi-g++.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX executable.
+
+rule CXX_EXECUTABLE_LINKER__Dust_Gimbal_Release
+  command = C:\Windows\system32\cmd.exe /C "$PRE_LINK && C:\Users\noneo\.eide\tools\gcc_arm\bin\arm-none-eabi-g++.exe $FLAGS -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -T "C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/STM32H723XG_FLASH.ld" --specs=nano.specs -Wl,-Map=Dust_Gimbal.map -Wl,--gc-sections -Wl,--start-group -lc -lm -Wl,--end-group -Wl,--print-memory-usage -Wl,--start-group -lstdc++ -lsupc++ -Wl,--end-group $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
+  description = Linking CXX executable $TARGET_FILE
+  rspfile = $RSP_FILE
+  rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
   restat = $RESTAT
 
 

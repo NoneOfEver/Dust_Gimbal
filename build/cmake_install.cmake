@@ -54,7 +54,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Algorithm/cmake_install.cmake")
+  include("C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Middlewares/Third_Party/SEGGER/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Modules/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

@@ -42,6 +42,26 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/cmake/stm32cubemx/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/App/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/Bsp/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/Middlewares/Third_Party/SEGGER/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/Modules/cmake_install.cmake")
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

@@ -6,3 +6,11 @@ C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/cmake/stm32cubemx
 C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/cmake/stm32cubemx/CMakeFiles/FreeRTOS.dir
 C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
 C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
+C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/App/CMakeFiles/edit_cache.dir
+C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/App/CMakeFiles/rebuild_cache.dir
+C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/Bsp/CMakeFiles/edit_cache.dir
+C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/Bsp/CMakeFiles/rebuild_cache.dir
+C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/Middlewares/Third_Party/SEGGER/CMakeFiles/edit_cache.dir
+C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/Middlewares/Third_Party/SEGGER/CMakeFiles/rebuild_cache.dir
+C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/Modules/CMakeFiles/edit_cache.dir
+C:/Users/noneo/Desktop/RM/Dust_Lower/Dust_Gimbal/build/Release/Modules/CMakeFiles/rebuild_cache.dir
